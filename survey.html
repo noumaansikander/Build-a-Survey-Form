@@ -1,0 +1,136 @@
+
+<html>
+    <head>
+      <title></title>
+      <link rel="stylesheet" href="stylesurvey.css">
+    </head>
+    <body>
+      <div id="container">
+        <div>
+          <h1 id="title">freeCodeCamp Survey Form</h1>
+          <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </div>
+        <form id="survey-form">
+          <h3 id="name-label">Name</h3><br>
+          <input type="text" id="name" placeholder="Enter your name" required></input><br>
+    
+          <h3 id="email-label">Email</h3><br>
+          <input type="email" id="email" placeholder="Enter your email" required></input><br>
+    
+          <h3 id="number-label">Age (optional)</h3><br>
+          <input type="number" id="number" placeholder="Age" min=5 max=10></input><br>
+    
+          <h3 id="role-label">Which option best describes your current role?</h3><br>
+          <select id="dropdown" >
+            <option selected>Select current role</option>
+            <option value="Student">Student</option>
+            <option value="Full-time Job">Full-time Job</option>
+            <option value="Full-time learner">Full-time learner</option>          
+            <option value="Prefer not to say">Prefer not to say</option>
+            <option value="Other">Other</option>
+          </select><br>
+    
+          <br>
+          <h3>Would you recommend freeCodeCamp to a friend?</h3><br>
+          <input type="radio" name="recommondation" value="Definitely"></input>
+          <label for="Definitely">Definitely</label>
+          <br>
+          <input type="radio" name="recommondation" value="Maybe"></input>
+          <label for="Maybe">Maybe</label>
+          <br>     
+          <input type="radio" name="recommondation" value="NotSure"></input>
+          <label for="NotSure">Not Sure</label>
+          <br> <br>
+  
+          <h3 id="role-label">What is your favorite feature of freeCodeCamp?</h3><br>
+          <select id="dropdown" >
+            <option selected>Select an option</option>
+            <option value="Challenges">Challenges</option>
+            <option value="Projects">Projects</option>
+            <option value="Community">Community</option>          
+            <option value="Open Source">Open Source</option>
+          </select><br><br>
+  
+  
+          <h3>What would you like to see improved? (Check all that apply)</h3><br>
+          <input type="checkbox" name="improvement" value="FrontEndProjects" id="FrontEndProjects"></input>
+          <label for="FrontEndProjects">Front-end Projects</label>
+          <br> 
+          <input type="checkbox" name="improvement" value="BackEndProjects" id="BackEndProjects"></input>
+          <label for="BackEndProjects">Back-end Projects</label>
+          <br> 
+          <input type="checkbox" name="improvement" value="DataVisualization" id="DataVisualization"></input>
+          <label for="DataVisualization">Data Visualization</label>
+          <br> 
+          <input type="checkbox" name="improvement" value="Challenges" id="FrontEndProjects"></input>
+          <label for="Challenges">Challenges</label>
+          <br> 
+          <input type="checkbox" name="improvement" value="Open Source Community" id="BackEndProjects"></input>
+          <label for="Open Source Community">Open Source Community</label>
+          <br> 
+          <input type="checkbox" name="improvement" value="Gitter help rooms" id="DataVisualization"></input>
+          <label for="Gitter help rooms">Gitter help rooms</label>
+          <br>
+          <input type="checkbox" name="improvement" value="Videos" id="FrontEndProjects"></input>
+          <label for="Videos" >Videos</label>
+          <br> 
+          <input type="checkbox" name="improvement" value="City Meetups" id="BackEndProjects"></input>
+          <label for="City Meetups">City Meetups</label>
+          <br> 
+          <input type="checkbox" name="improvement" value="Wiki" id="DataVisualization"></input>
+          <label for="Wiki">Wiki</label>
+          <br>
+          <input type="checkbox" name="improvement" value="Forum" id="FrontEndProjects"></input>
+          <label for="Forum">Forum</label>
+          <br> 
+          <input type="checkbox" name="improvement" value="Additional Courses" id="BackEndProjects"></input>
+          <label for="Additional Courses">Additional Courses</label>
+          <br>  <br>
+          
+          <h3>Any comments or suggestions?</h3><br>  
+          <textarea placeholder="Enter your comment here..." rows="250"></textarea><br><br>
+               
+          <input type="submit" id="submit"></input>
+    
+        </form>
+      </div>
+    <!-- Code injected by live-server -->
+  <script>
+      // <![CDATA[  <-- For SVG support
+      if ('WebSocket' in window) {
+          (function () {
+              function refreshCSS() {
+                  var sheets = [].slice.call(document.getElementsByTagName("link"));
+                  var head = document.getElementsByTagName("head")[0];
+                  for (var i = 0; i < sheets.length; ++i) {
+                      var elem = sheets[i];
+                      var parent = elem.parentElement || head;
+                      parent.removeChild(elem);
+                      var rel = elem.rel;
+                      if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                      }
+                      parent.appendChild(elem);
+                  }
+              }
+              var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+              var address = protocol + window.location.host + window.location.pathname + '/ws';
+              var socket = new WebSocket(address);
+              socket.onmessage = function (msg) {
+                  if (msg.data == 'reload') window.location.reload();
+                  else if (msg.data == 'refreshcss') refreshCSS();
+              };
+              if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                  console.log('Live reload enabled.');
+                  sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+              }
+          })();
+      }
+      else {
+          console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+      }
+      // ]]>
+  </script>
+  </body>
+  </html>
